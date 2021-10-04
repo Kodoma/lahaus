@@ -1,0 +1,59 @@
+.card-images-container {
+  width: 100%;
+  max-width: 294px;
+  height: 196px;
+  @apply relative;
+
+  img {
+    height: 196px;
+  }
+
+  &--content-1 {
+    .image-container-1 {
+      @apply relative;
+    }
+  }
+
+  &--content-2 {
+    @apply grid grid-cols-2 gap-0;
+
+    .image-container-1 {
+      width: 150px;
+
+      @apply z-40 relative;
+    }
+
+    .image-container-2 {
+      width: 218px;
+
+      @apply z-30 absolute right-0;
+    }
+  }
+
+  &--content-3 {
+    @apply grid grid-cols-3 gap-0;
+
+    .image-container-1 {
+      width: 150px;
+
+      @apply z-40 relative;
+    }
+
+    .image-container-2 {
+      left: 116px;
+      width: 115px;
+
+      @apply z-30 absolute;
+    }
+
+    .image-container-3 {
+      @apply z-20 right-0 absolute;
+
+      &::before {
+        content: "";
+
+        @apply bg-green-800 bg-opacity-50 rounded-lg w-full h-full absolute;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+version: "2"
+
+services:
+  lahaus-ui:
+    build: ${PWD}
+    command: sh ./build.sh
+    volumes:
+      - ${PWD}/build.sh:/lahaus-ui/build.sh
+    ports:
+      - "3000:3000"

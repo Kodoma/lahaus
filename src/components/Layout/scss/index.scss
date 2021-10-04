@@ -1,0 +1,22 @@
+.layout-container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+
+  @apply grid grid-cols-1 h-screen;
+}
+
+.layout-container > header {
+  grid-area: header;
+}
+
+.layout-container > main {
+  grid-area: main;
+}
+
+.layout-container > footer {
+  grid-area: footer;
+}
